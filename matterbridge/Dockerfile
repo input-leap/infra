@@ -1,4 +1,4 @@
-FROM golang:1.17 as builder
+FROM golang:1.23 as builder
 
 WORKDIR /
 RUN go install github.com/DarthSim/hivemind@v1.0.6
