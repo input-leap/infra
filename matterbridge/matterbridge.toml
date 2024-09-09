@@ -1,11 +1,10 @@
 [irc.main]
-Server="irc.ipv4.libera.chat:7070"
+Server="irc.libera.chat:6697"
 Nick="InputLeap[Bridge]"
 NickServNick="InputLeap[Bridge]"
 UseTLS=true
 UseSASL=false
 SkipTLSVerify=true
-Label="irc"
 RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
 
 [matrix.main]
@@ -22,51 +21,52 @@ PreserveThreading=true
 
 ## IRC <-> Matrix
 [[gateway]]
-name="inputleap-irc-matrix-main"
+name="inputleap-irc-main"
 enable=true
 
 [[gateway.inout]]
 account="matrix.main"
-channel="!CQazCnuubucmpcPWmF:matrix.org"
+channel = "!CQazCnuubucmpcPWmF:matrix.org"
 
 [[gateway.inout]]
 account="irc.main"
 channel="#inputleap"
 
 [[gateway]]
-name="inputleap-irc-matrix-dev"
+name="inputleap-irc-dev"
 enable=true
 
 [[gateway.inout]]
 account="matrix.main"
-channel="!WwOdlyMATveZWpLwQR:matrix.org"
+channel = "!WwOdlyMATveZWpLwQR:matrix.org"
 
 [[gateway.inout]]
 account="irc.main"
 channel="#inputleap-dev"
 
-## Discord <-> Matrix
+## end
+
 [[gateway]]
-name="inputleap-matrix-discord-main"
+name="inputleap-matrix-dev"
 enable=true
 
 [[gateway.inout]]
 account="matrix.main"
-channel="!CQazCnuubucmpcPWmF:matrix.org"
-
-[[gateway.inout]]
-account="discord.main"
-channel="inputleap"
-
-[[gateway]]
-name="inputleap-matrix-discord-dev"
-enable=true
-
-[[gateway.inout]]
-account="matrix.main"
-channel="!WwOdlyMATveZWpLwQR:matrix.org"
+channel = "!WwOdlyMATveZWpLwQR:matrix.org"
 
 [[gateway.inout]]
 account="discord.main"
 channel="inputleap-dev"
+
+[[gateway]]
+name="inputleap-matrix-main"
+enable=true
+
+[[gateway.inout]]
+account="matrix.main"
+channel = "!CQazCnuubucmpcPWmF:matrix.org"
+
+[[gateway.inout]]
+account="discord.main"
+channel="inputleap"
 

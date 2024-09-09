@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for inputleap-matterbridge on 2024-08-22T22:11:15+01:00
+# fly.toml app configuration file generated for inputleap-matterbridge on 2024-09-09T10:49:57+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -11,14 +11,15 @@ kill_timeout = '5s'
 [build]
 
 [http_service]
+  internal_port = 8080
   auto_stop_machines = 'off'
   auto_start_machines = true
   min_machines_running = 1
 
 [[restart]]
-  policy = "always"
+  policy = 'always'
   retries = 10
-  processes = ["app"]
+  processes = ['app']
 
 [[vm]]
   memory = '256mb'
