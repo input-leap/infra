@@ -21,7 +21,7 @@ PreserveThreading=true
 
 ## IRC <-> Matrix
 [[gateway]]
-name="inputleap-irc-main"
+name="inputleap-irc-matrix-main"
 enable=true
 
 [[gateway.inout]]
@@ -33,7 +33,7 @@ account="irc.main"
 channel="#inputleap"
 
 [[gateway]]
-name="inputleap-irc-dev"
+name="inputleap-irc-matrix-dev"
 enable=true
 
 [[gateway.inout]]
@@ -47,7 +47,7 @@ channel="#inputleap-dev"
 ## end
 
 [[gateway]]
-name="inputleap-matrix-dev"
+name="inputleap-discord-matrix-main"
 enable=true
 
 [[gateway.inout]]
@@ -59,7 +59,7 @@ account="discord.main"
 channel="inputleap-dev"
 
 [[gateway]]
-name="inputleap-matrix-main"
+name="inputleap-discord-matrix-main"
 enable=true
 
 [[gateway.inout]]
